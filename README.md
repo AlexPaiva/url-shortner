@@ -1,11 +1,12 @@
-# URL Shortner
+# My Awesome URL Shortner
 
-This is a URL Shortner project using Symfony for the backend and Vue.js for the frontend.
+This project is a full-stack URL shortener application built with Symfony (backend) and Vue.js (frontend).
 
 ## Prerequisites
 
 - Node.js and npm
 - PHP and Composer
+- Symfony CLI
 - MySQL
 
 ## Getting Started
@@ -33,9 +34,9 @@ This is a URL Shortner project using Symfony for the backend and Vue.js for the 
     php bin/console doctrine:migrations:migrate
     ```
 
-5. Start the Symfony server:
+5. Start the Symfony server on a specified port (e.g., 43000):
     ```sh
-    symfony serve
+    symfony serve --port=43000
     ```
 
 ### Frontend
@@ -45,7 +46,7 @@ This is a URL Shortner project using Symfony for the backend and Vue.js for the 
     cd frontend
     ```
 
-2. Copy the example environment file and edit the configuration:
+2. Copy the example environment file and edit the configuration (Ensure it contains the correct API URL (matching the Symfony server URL):
     ```sh
     cp .env.example .env
     ```
@@ -75,5 +76,13 @@ php bin/phpunit
 To run frontend tests:
 ```sh
 cd frontend
-npm run test
+npm run test:unit
+npm run test:e2e
 ```
+
+##Usage
+
+Once both the Symfony backend and Vue.js frontend servers are running, open your browser and navigate to:
+- http://localhost:8080
+
+You can now use the My Awesome URL shortener application.
