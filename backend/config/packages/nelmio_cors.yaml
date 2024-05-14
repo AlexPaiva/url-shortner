@@ -1,0 +1,12 @@
+nelmio_cors:
+    defaults:
+        allow_origin: ['http://localhost:8080']
+        allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'DELETE']
+        allow_headers: ['Content-Type']
+        max_age: 3600
+    paths:
+        '^/':
+            allow_origin: ['http://localhost:8080']
+            allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'DELETE']
+            allow_headers: ['Content-Type']
+            max_age: 3600
